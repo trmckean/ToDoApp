@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
       }else{
         this.editTodos.splice(this.editTodos.indexOf(todo), 1)
         this.todoService.editTodo(todo).subscribe(res => {
-          console.log('Update Succesful')
+          console.log('Update Successful')
         }, err => {
           this.editTodo(todo)
-          console.error('Update Unsuccesful')
+          console.error('Update Unsuccessful')
         })
       }
     }
@@ -56,10 +56,10 @@ export class AppComponent implements OnInit {
   doneTodo(todo:ToDo){
     todo.status = 'Done'
     this.todoService.editTodo(todo).subscribe(res => {
-      console.log('Update Succesful')
+      console.log('Update Successful')
     }, err => {
       this.editTodo(todo)
-      console.error('Update Unsuccesful')
+      console.error('Update Unsuccessful')
     })
   }
 
